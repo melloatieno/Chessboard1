@@ -3,8 +3,10 @@ import random
 print ("Winning rule of the Rock-Paper-Scissor game ar as follows: \n Same choice-> draw \n Rock vs paper->paper wins \n Rock vs scissor->Rock wins \n paper vs scissor->scissor wins \n")
 
 while True:
-   user_choice = (input("User turn (R, P, S):"))
    possible_actions = ["R", "P", "S"]
+   user_choice = (input("User turn (R, P, S):"))
+   if user_choice not in possible_actions:
+      print("Invalid input! Try again!")
    computer_selection = random.choice(possible_actions)
 
    print("Computer choice is: " + computer_selection)
